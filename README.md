@@ -6,8 +6,10 @@
 
 ### Team Members
 
-- **Ibrahim Suleymanov & Orkhan** → Modeling & Pipeline Development  
-- **Revan & Khalid** → Demo & Application Development – Exploratory Data Analysis (EDA)
+- **Orkhan Nuriyev** → Database Design & Pipeline Development, Web Development
+- **Ibrahim Suleymanov** → Machine Learning Modelling
+- **Khalid Ahmedov** → Demo & Web Development
+- **Revan Khanbabayev** → Exploratory Data Analysis (EDA)
 
 ---
 
