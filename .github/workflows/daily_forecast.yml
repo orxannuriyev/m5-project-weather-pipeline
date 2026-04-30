@@ -2,8 +2,8 @@ name: 🌱 Daily Soil Moisture Forecast
 
 on:
   schedule:
-    # Runs every day at 06:00 UTC (10:00 Baku time)
-    - cron: '0 6 * * *'
+    # Runs every day at 00:00 UTC (04:00 Baku time)
+    - cron: '0 0 * * *'
   workflow_dispatch: # Manual trigger button in GitHub UI
 
 jobs:
