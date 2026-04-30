@@ -1,0 +1,36 @@
+name: 🌱 Daily Soil Moisture Forecast
+
+on:
+  schedule:
+    # Runs every day at 06:00 UTC (10:00 Baku time)
+    - cron: '0 6 * * *'
+  workflow_dispatch: # Manual trigger button in GitHub UI
+
+jobs:
+  update-predictions:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 📥 Checkout repo
+        uses: actions/checkout@v4
+
+      - name: 🐍 Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: 📦 Install dependencies
+        run: |
+          pip install requests pandas joblib xgboost scikit-learn numpy
+
+      - name: 🤖 Generate fresh predictions
+        run: python src/quick_forecast.py
+
+      - name: 📤 Commit & push updated predictions
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add web/public/predictions.json web/src/forecast_data.json
+          # Only commit if there are changes
+          git diff --staged --quiet || git commit -m "🌱 Auto-update soil moisture predictions [$(date -u '+%Y-%m-%d')]"
+          git push

@@ -14,9 +14,13 @@ import pipeline
 from config import CITIES
 
 def generate_city_forecasts():
-    # 1. Pipeline 
+    # 1. Pipeline (try to refresh data, but continue with cached data if API fails)
     print(" Pipeline is working ...")
-    pipeline.run_pipeline(mode="incremental")
+    try:
+        pipeline.run_pipeline(mode="incremental")
+    except Exception as e:
+        print(f"\n⚠️  Pipeline failed: {e}")
+        print("   Continuing with existing cached data in database...\n")
     
     conn = database.get_connection()
     
@@ -102,7 +106,7 @@ def generate_city_forecasts():
     
     conn.close()
 
-    # ── Nəticələri JSON faylına yaz (web demo üçün) ──
+    # ── Nəticələri JSON fayllarına yaz (web demo üçün) ──
     # Python-dakı şəhər adlarını web-dəki key-lərə çeviririk
     city_name_to_web_key = {
         "Baki": "Baku",
@@ -112,6 +116,7 @@ def generate_city_forecasts():
         "Zerdab": "Zerdab"
     }
 
+    # Detailed format (date + value) → web/src/forecast_data.json
     forecast_dict = {}
     for result in all_forecast_results:
         web_key = city_name_to_web_key.get(result["City"], result["City"])
@@ -127,6 +132,23 @@ def generate_city_forecasts():
         json.dump(forecast_dict, f, indent=4)
 
     print(f"\n✅ Proqnozlar 'web/src/forecast_data.json' faylına yazıldı.")
+
+    # Flat-array format (just numbers) → web/public/predictions.json
+    # This is the format the dashboard actually reads via fetch('/predictions.json')
+    predictions_flat = {}
+    for result in all_forecast_results:
+        web_key = city_name_to_web_key.get(result["City"], result["City"])
+        if web_key not in predictions_flat:
+            predictions_flat[web_key] = []
+        predictions_flat[web_key].append(result["Soil_Moisture"])
+
+    public_dir = os.path.join(ROOT_DIR, "web", "public")
+    os.makedirs(public_dir, exist_ok=True)
+    predictions_path = os.path.join(public_dir, "predictions.json")
+    with open(predictions_path, "w") as f:
+        json.dump(predictions_flat, f, indent=2)
+
+    print(f"✅ Proqnozlar 'web/public/predictions.json' faylına da yazıldı.")
 
 if __name__ == "__main__":
     generate_city_forecasts()
