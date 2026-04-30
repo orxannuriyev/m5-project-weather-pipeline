@@ -115,6 +115,18 @@ The pipeline will:
 
 Logs are written to `logs/pipeline.log`.
 
+### Running the Web Dashboard
+
+The project includes a modern React/Vite dashboard to visualize the soil moisture predictions and receive irrigation alerts.
+
+```bash
+cd web
+npm install
+npm run dev
+```
+
+Open your browser at `http://localhost:5175` (or the port provided in the terminal) to view the dashboard.
+
 ---
 
 ## 📅 Project Roadmap & Daily Activities
