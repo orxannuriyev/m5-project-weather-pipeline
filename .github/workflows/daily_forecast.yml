@@ -21,7 +21,7 @@ jobs:
 
       - name: 📦 Install dependencies
         run: |
-          pip install requests pandas joblib xgboost scikit-learn numpy duckdb openmeteo-requests requests-cache retry-requests
+          pip install requests pandas joblib xgboost scikit-learn numpy duckdb openmeteo-requests requests-cache retry-requests pyarrow
 
       - name: 🤖 Generate fresh predictions (Original Pipeline)
         run: python src/run_forecast.py
