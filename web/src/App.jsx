@@ -139,7 +139,7 @@ function IrrigationCard({ advice, threshold, moisturePercent }) {
 }
 
 /* ── Email Alerts Card ── */
-function EmailAlerts({ crop, city, current, advice, forecast }) {
+function EmailAlerts({ crop, city, soil, current, advice, forecast }) {
   const [email, setEmail] = useState('');
   const [subscribed, setSubscribed] = useState(false);
   const [loading, setLoading] = useState(false);
@@ -150,12 +150,19 @@ function EmailAlerts({ crop, city, current, advice, forecast }) {
     setLoading(true);
 
     try {
-      const forecastHtml = forecast.map(f => `
-        <tr style="border-bottom: 1px solid #e5e7eb;">
-          <td style="padding: 10px; color: #374151;">${f.dateLabel}</td>
-          <td style="padding: 10px; font-weight: bold; color: #059669;">${f.soilMoisturePercent}%</td>
-        </tr>
-      `).join('');
+      const forecastHtml = forecast.map(f => {
+        const adv = getIrrigationAdvice(f.soilMoisturePercent, crop, soil);
+        const dotColor = adv.color === 'green' ? '#10b95f' : adv.color === 'yellow' ? '#eab308' : '#ef4444';
+        const statusText = adv.title.split(' — ')[0].split(' ').slice(0,2).join(' ');
+        
+        return `
+          <tr style="border-bottom: 1px solid #e5e7eb;">
+            <td style="padding: 10px; color: #374151;">${f.dateLabel}</td>
+            <td style="padding: 10px; font-weight: bold; color: #059669;">${f.soilMoisturePercent}%</td>
+            <td style="padding: 10px; color: #374151;"><span style="color: ${dotColor};">●</span> ${statusText}</td>
+          </tr>
+        `;
+      }).join('');
 
       const response = await fetch('https://api.emailjs.com/api/v1.0/email/send', {
         method: 'POST',
@@ -488,7 +495,7 @@ export default function App() {
             <IrrigationCard advice={advice} threshold={threshold} moisturePercent={current.soilMoisturePercent || 0} />
           </div>
           <div>
-            <EmailAlerts crop={selectedCrop} city={selectedCity} current={current} advice={advice} forecast={forecast} />
+            <EmailAlerts crop={selectedCrop} city={selectedCity} soil={selectedSoil} current={current} advice={advice} forecast={forecast} />
           </div>
         </div>
 
