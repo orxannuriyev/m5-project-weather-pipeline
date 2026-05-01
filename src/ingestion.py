@@ -22,7 +22,12 @@ def fetch_historical(city_name, latitude, longitude, start_date, end_date, varia
     if end_dt > today_dt:
         raise ValueError(f"Error: Future dates ({end_date}) cannot be selected for historical data.")
 
-    url = HISTORICAL_API_URL
+    # Smart Bypass: If data is within the last 60 days, use FORECAST_API to bypass the 5-day archive delay
+    if (today_dt - end_dt).days <= 60:
+        url = FORECAST_API_URL
+    else:
+        url = HISTORICAL_API_URL
+
     params = {
         "latitude": latitude, "longitude": longitude,
         "start_date": start_date, "end_date": end_date,

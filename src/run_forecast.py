@@ -95,7 +95,7 @@ def generate_city_forecasts():
         print(" No forecasts could be generated. Please check the models and data.")
         return
 
-    # 4. Cədvəl formatında çıxış
+    # 4. Output in tabular format
     final_df = pd.DataFrame(all_forecast_results)
     pivot_df = final_df.pivot(index='Date', columns='City', values='Soil_Moisture')
     
@@ -106,8 +106,8 @@ def generate_city_forecasts():
     
     conn.close()
 
-    # ── Nəticələri JSON fayllarına yaz (web demo üçün) ──
-    # Python-dakı şəhər adlarını web-dəki key-lərə çeviririk
+    # ── Write results to JSON files (for web dashboard) ──
+    # Convert Python city names to web keys
     city_name_to_web_key = {
         "Baki": "Baku",
         "Lenkeran": "Lenkeran",
@@ -131,7 +131,7 @@ def generate_city_forecasts():
     with open(output_path, "w") as f:
         json.dump(forecast_dict, f, indent=4)
 
-    print(f"\n✅ Proqnozlar 'web/src/forecast_data.json' faylına yazıldı.")
+    print(f"\n✅ Forecasts written to 'web/src/forecast_data.json'.")
 
     # Flat-array format (just numbers) → web/public/predictions.json
     # This is the format the dashboard actually reads via fetch('/predictions.json')
@@ -148,7 +148,7 @@ def generate_city_forecasts():
     with open(predictions_path, "w") as f:
         json.dump(predictions_flat, f, indent=2)
 
-    print(f"✅ Proqnozlar 'web/public/predictions.json' faylına da yazıldı.")
+    print(f"✅ Forecasts also written to 'web/public/predictions.json'.")
 
 if __name__ == "__main__":
     generate_city_forecasts()
