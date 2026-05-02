@@ -23,7 +23,7 @@ CITIES = [
     {"name": "Saatli", "lat": 39.9321, "lon": 48.3689}
 ]
 
-# 4. Date Range Logic (Pipeline üçün son 10 gün)
+# 4. Date Range Logic (Last 10 days for pipeline)
 TODAY = date.today()
 START_DATE = (TODAY - timedelta(days=10)).strftime('%Y-%m-%d')
 END_DATE = (TODAY - timedelta(days=1)).strftime('%Y-%m-%d')

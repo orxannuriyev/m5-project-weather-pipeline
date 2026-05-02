@@ -70,4 +70,4 @@ def clean_raw_to_staging(conn):
     print("📊 Sample of cleaned data:")
     print(df.head(5).to_string(index=False))
 
-    return df  # əlavə: təmizlənmiş df-i qaytarır ki, notebook-da görə biləsən
+    return df  # Return cleaned df so it can be inspected in notebooks
