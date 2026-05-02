@@ -1,5 +1,5 @@
 /**
- * SoilSense — Mock Data Generator
+ * QuadroSense — Mock Data Generator
  *
  * Each city has a realistic climatic profile based on Azerbaijan's geography:
  *   • Baku       — Semi-arid, Caspian coast (dry, warm)
@@ -136,8 +136,15 @@ export function simulateModelPrediction(cityKey, dynamicPredictions = null) {
   let prevMoisture = profile.moisture.base;
 
   for (let day = 0; day < 14; day++) {
-    const date = new Date(today);
-    date.setDate(today.getDate() + day);
+    // Use actual model dates if available, otherwise compute from today
+    let date;
+    const modelDates = dynamicPredictions?.dates;
+    if (modelDates && modelDates[day]) {
+      date = new Date(modelDates[day] + 'T00:00:00');
+    } else {
+      date = new Date(today);
+      date.setDate(today.getDate() + day);
+    }
 
     // Sinusoidal seasonal drift + noise
     const dayFraction = day / 14;

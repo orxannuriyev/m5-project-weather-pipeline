@@ -1,4 +1,4 @@
-# SoilSense
+# QuadroSense
 
 > **An end-to-end soil moisture predictor and analytical pipeline.**
 
@@ -14,7 +14,7 @@
 ---
 
 ## 📌 Problem Statement
-Can we accurately predict soil moisture levels for the next 14 days across diverse climatic zones in Azerbaijan? By systematically analyzing a decade of historical weather patterns, **SoilSense serves as a robust soil moisture predictor** aimed at providing high-precision irrigation guidance specifically tailored for regional agriculture, such as cotton cultivation in Saatli and tea farming in Lankaran.
+Can we accurately predict soil moisture levels for the next 14 days across diverse climatic zones in Azerbaijan? By systematically analyzing a decade of historical weather patterns, **QuadroSense serves as a robust soil moisture predictor** aimed at providing high-precision irrigation guidance specifically tailored for regional agriculture, such as cotton cultivation in Saatli and tea farming in Lankaran.
 
 ## 💡 Why It Matters
 Reliable soil moisture forecasting is the backbone of efficient agricultural water management. This pipeline addresses genuine climate data challenges—such as seasonal non-stationarity and sensor gaps—to help farmers and agricultural planners optimize irrigation scheduling, conserve water resources, and maximize crop yields in varying climates. 

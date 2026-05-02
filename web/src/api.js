@@ -1,5 +1,5 @@
 /**
- * SoilSense — Live Weather API (Open-Meteo)
+ * QuadroSense — Live Weather API (Open-Meteo)
  *
  * Fetches real 14-day temperature & humidity forecasts.
  * Soil moisture remains simulated (from XGBoost mock) since the
@@ -40,7 +40,7 @@ export async function fetchCityForecast(cityKey) {
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
     return await res.json();
   } catch (err) {
-    console.warn(`[SoilSense] Open-Meteo fetch failed for ${cityKey}:`, err.message);
+    console.warn(`[QuadroSense] Open-Meteo fetch failed for ${cityKey}:`, err.message);
     return null;
   }
 }

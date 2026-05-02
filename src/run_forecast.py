@@ -133,9 +133,20 @@ def generate_city_forecasts():
 
     print(f"\n✅ Forecasts written to 'web/src/forecast_data.json'.")
 
-    # Flat-array format (just numbers) → web/public/predictions.json
+    # Flat-array format (numbers + dates) → web/public/predictions.json
     # This is the format the dashboard actually reads via fetch('/predictions.json')
     predictions_flat = {}
+
+    # Collect unique dates (all cities share the same date range)
+    seen_dates = []
+    seen_set = set()
+    for result in all_forecast_results:
+        d = result["Date"]
+        if d not in seen_set:
+            seen_set.add(d)
+            seen_dates.append(d)
+    predictions_flat["dates"] = seen_dates[:14]  # exactly 14 days
+
     for result in all_forecast_results:
         web_key = city_name_to_web_key.get(result["City"], result["City"])
         if web_key not in predictions_flat:

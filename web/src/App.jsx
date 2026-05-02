@@ -197,7 +197,7 @@ function EmailAlerts({ crop, city, soil, current, advice, forecast }) {
     } catch (error) {
       console.error('Email sending failed:', error);
       setLoading(false);
-      alert(`Xəta baş verdi: ${error.message}`);
+      alert(`Error: ${error.message}`);
     }
   };
 
@@ -410,7 +410,7 @@ export default function App() {
             </div>
             <div>
               <h1 className="text-lg font-bold tracking-tight" style={{ color: 'var(--text-primary)' }}>
-                Soil<span style={{ color: 'var(--accent)' }}>Sense</span>
+                Quadro<span style={{ color: 'var(--accent)' }}>Sense</span>
               </h1>
               <p className="text-[11px]" style={{ color: 'var(--text-muted)' }}>Smart Irrigation Advisory</p>
             </div>
@@ -566,7 +566,7 @@ export default function App() {
 
         {/* Footer */}
         <footer className="border-t pt-6 text-center text-xs" style={{ borderColor: 'var(--footer-border)', color: 'var(--text-secondary)' }}>
-          <p><span className="font-semibold" style={{ color: 'var(--accent)' }}>SoilSense</span> — Developed by Team <span className="font-semibold" style={{ color: 'var(--accent)' }}>QUADRA COSMOS</span></p>
+          <p><span className="font-semibold" style={{ color: 'var(--accent)' }}>QuadroSense</span> — Developed by Team <span className="font-semibold" style={{ color: 'var(--accent)' }}>QUADRA COSMOS</span></p>
           <p className="mt-1">Soil moisture predictions powered by XGBoost models · Crop thresholds from agronomic datasets · Weather from Open-Meteo API</p>
           <p className="mt-1" style={{ color: 'var(--text-muted)' }}>{time.toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })}</p>
         </footer>

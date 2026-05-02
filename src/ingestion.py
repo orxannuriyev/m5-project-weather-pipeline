@@ -17,8 +17,8 @@ def fetch_historical(city_name, latitude, longitude, start_date, end_date, varia
     end_dt = pd.to_datetime(end_date)
     today_dt = pd.Timestamp.now().normalize()
 
-    if start_dt >= end_dt:
-        raise ValueError(f"Error: start_date ({start_date}) must be less than end_date ({end_date}).")
+    if start_dt > end_dt:
+        raise ValueError(f"Error: start_date ({start_date}) must be less than or equal to end_date ({end_date}).")
     if end_dt > today_dt:
         raise ValueError(f"Error: Future dates ({end_date}) cannot be selected for historical data.")
 
