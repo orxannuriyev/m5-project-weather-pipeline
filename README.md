@@ -13,6 +13,18 @@
 
 ---
 
+## 🌐 Live Website
+
+Experience the live, AI-powered predictions in action!  
+👉 **[Visit QuadroSense Online](https://www.quadrosense.online/)**
+
+The website features:
+- **Interactive 14-Day Forecasts**: Real-time soil moisture predictions based on our XGBoost models.
+- **Smart Irrigation Advisory**: Dynamic thresholds customized per crop and soil type.
+- **Email Alerts**: Automated notifications when irrigation is needed.
+
+---
+
 ## 📌 Problem Statement
 Can we accurately predict soil moisture levels for the next 14 days across diverse climatic zones in Azerbaijan? By systematically analyzing a decade of historical weather patterns, **QuadroSense serves as a robust soil moisture predictor** aimed at providing high-precision irrigation guidance specifically tailored for regional agriculture, such as cotton cultivation in Saatli and tea farming in Lankaran.
 
