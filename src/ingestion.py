@@ -44,12 +44,13 @@ def fetch_historical(city_name, latitude, longitude, start_date, end_date, varia
             daily = response.Daily()
             daily_data = {
                 "date": pd.date_range(
-                    start=pd.to_datetime(daily.Time(), unit="s", utc=True),
-                    end=pd.to_datetime(daily.TimeEnd(), unit="s", utc=True),
+                    start=pd.to_datetime(daily.Time() + response.UtcOffsetSeconds(), unit="s", utc=True),
+                    end=pd.to_datetime(daily.TimeEnd() + response.UtcOffsetSeconds(), unit="s", utc=True),
                     freq=pd.Timedelta(seconds=daily.Interval()),
                     inclusive="left"
                 )
             }
+
             for i, var_name in enumerate(variables):
                 daily_data[var_name] = daily.Variables(i).ValuesAsNumpy()
 
@@ -80,12 +81,13 @@ def fetch_forecast(city_name, latitude, longitude, variables):
             daily = response.Daily()
             daily_data = {
                 "date": pd.date_range(
-                    start=pd.to_datetime(daily.Time(), unit="s", utc=True),
-                    end=pd.to_datetime(daily.TimeEnd(), unit="s", utc=True),
+                    start=pd.to_datetime(daily.Time() + response.UtcOffsetSeconds(), unit="s", utc=True),
+                    end=pd.to_datetime(daily.TimeEnd() + response.UtcOffsetSeconds(), unit="s", utc=True),
                     freq=pd.Timedelta(seconds=daily.Interval()),
                     inclusive="left"
                 )
             }
+
             for i, var_name in enumerate(variables):
                 daily_data[var_name] = daily.Variables(i).ValuesAsNumpy()
 

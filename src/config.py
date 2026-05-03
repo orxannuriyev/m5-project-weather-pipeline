@@ -1,4 +1,5 @@
-from datetime import date, timedelta
+from datetime import datetime, timedelta
+import pytz
 
 # 1. API URLs
 HISTORICAL_API_URL = "https://archive-api.open-meteo.com/v1/archive"
@@ -24,6 +25,7 @@ CITIES = [
 ]
 
 # 4. Date Range Logic (Last 10 days for pipeline)
-TODAY = date.today()
+baku_tz = pytz.timezone('Asia/Baku')
+TODAY = datetime.now(baku_tz).date()
 START_DATE = (TODAY - timedelta(days=10)).strftime('%Y-%m-%d')
 END_DATE = (TODAY - timedelta(days=1)).strftime('%Y-%m-%d')
