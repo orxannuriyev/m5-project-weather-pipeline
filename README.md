@@ -7,7 +7,7 @@
 ### Team Members
 
 - **Orkhan Nuriyev** → Database Design & Pipeline Development, Web Development
-- **Ibrahim Suleymanov** → Machine Learning Modelling
+- **Ibrahim Suleymanov** → Machine Learning Modelling, Statistical Analysis
 - **Khalid Ahmedov** → Demo & Web Development
 - **Revan Khanbabayev** → Exploratory Data Analysis (EDA)
 
