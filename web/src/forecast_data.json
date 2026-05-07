@@ -2,291 +2,291 @@
     "Zerdab": [
         {
             "date": "2026-05-07",
-            "soil_moisture": 0.2404
+            "soil_moisture": 0.2402
         },
         {
             "date": "2026-05-08",
-            "soil_moisture": 0.2545
+            "soil_moisture": 0.2453
         },
         {
             "date": "2026-05-09",
-            "soil_moisture": 0.2388
+            "soil_moisture": 0.2294
         },
         {
             "date": "2026-05-10",
-            "soil_moisture": 0.2245
+            "soil_moisture": 0.2157
         },
         {
             "date": "2026-05-11",
-            "soil_moisture": 0.2111
+            "soil_moisture": 0.2056
         },
         {
             "date": "2026-05-12",
-            "soil_moisture": 0.198
+            "soil_moisture": 0.1952
         },
         {
             "date": "2026-05-13",
-            "soil_moisture": 0.1886
+            "soil_moisture": 0.1979
         },
         {
             "date": "2026-05-14",
-            "soil_moisture": 0.1804
+            "soil_moisture": 0.1948
         },
         {
             "date": "2026-05-15",
-            "soil_moisture": 0.1859
+            "soil_moisture": 0.2062
         },
         {
             "date": "2026-05-16",
-            "soil_moisture": 0.2769
+            "soil_moisture": 0.2749
         },
         {
             "date": "2026-05-17",
-            "soil_moisture": 0.2588
+            "soil_moisture": 0.275
         },
         {
             "date": "2026-05-18",
-            "soil_moisture": 0.2389
+            "soil_moisture": 0.2518
         },
         {
             "date": "2026-05-19",
-            "soil_moisture": 0.2228
+            "soil_moisture": 0.2392
         },
         {
             "date": "2026-05-20",
-            "soil_moisture": 0.2253
+            "soil_moisture": 0.2251
         }
     ],
     "Quba": [
         {
             "date": "2026-05-07",
-            "soil_moisture": 0.3518
+            "soil_moisture": 0.3506
         },
         {
             "date": "2026-05-08",
-            "soil_moisture": 0.328
+            "soil_moisture": 0.3313
         },
         {
             "date": "2026-05-09",
-            "soil_moisture": 0.3123
+            "soil_moisture": 0.3031
         },
         {
             "date": "2026-05-10",
-            "soil_moisture": 0.2874
+            "soil_moisture": 0.2791
         },
         {
             "date": "2026-05-11",
-            "soil_moisture": 0.2682
+            "soil_moisture": 0.2536
         },
         {
             "date": "2026-05-12",
-            "soil_moisture": 0.2633
+            "soil_moisture": 0.2387
         },
         {
             "date": "2026-05-13",
-            "soil_moisture": 0.2606
+            "soil_moisture": 0.2499
         },
         {
             "date": "2026-05-14",
-            "soil_moisture": 0.266
+            "soil_moisture": 0.2635
         },
         {
             "date": "2026-05-15",
-            "soil_moisture": 0.2684
+            "soil_moisture": 0.2534
         },
         {
             "date": "2026-05-16",
-            "soil_moisture": 0.2866
+            "soil_moisture": 0.2584
         },
         {
             "date": "2026-05-17",
-            "soil_moisture": 0.2746
+            "soil_moisture": 0.2735
         },
         {
             "date": "2026-05-18",
-            "soil_moisture": 0.2571
+            "soil_moisture": 0.2509
         },
         {
             "date": "2026-05-19",
-            "soil_moisture": 0.2458
+            "soil_moisture": 0.2773
         },
         {
             "date": "2026-05-20",
-            "soil_moisture": 0.2618
+            "soil_moisture": 0.2695
         }
     ],
     "Lenkeran": [
         {
             "date": "2026-05-07",
-            "soil_moisture": 0.3362
+            "soil_moisture": 0.3354
         },
         {
             "date": "2026-05-08",
-            "soil_moisture": 0.3189
+            "soil_moisture": 0.3156
         },
         {
             "date": "2026-05-09",
-            "soil_moisture": 0.3039
+            "soil_moisture": 0.2981
         },
         {
             "date": "2026-05-10",
-            "soil_moisture": 0.2819
+            "soil_moisture": 0.2794
         },
         {
             "date": "2026-05-11",
-            "soil_moisture": 0.2695
+            "soil_moisture": 0.2654
         },
         {
             "date": "2026-05-12",
-            "soil_moisture": 0.2862
+            "soil_moisture": 0.2554
         },
         {
             "date": "2026-05-13",
-            "soil_moisture": 0.267
+            "soil_moisture": 0.2704
         },
         {
             "date": "2026-05-14",
-            "soil_moisture": 0.2521
+            "soil_moisture": 0.2615
         },
         {
             "date": "2026-05-15",
-            "soil_moisture": 0.237
+            "soil_moisture": 0.2568
         },
         {
             "date": "2026-05-16",
-            "soil_moisture": 0.2217
+            "soil_moisture": 0.2357
         },
         {
             "date": "2026-05-17",
-            "soil_moisture": 0.2091
+            "soil_moisture": 0.2231
         },
         {
             "date": "2026-05-18",
-            "soil_moisture": 0.1961
+            "soil_moisture": 0.2091
         },
         {
             "date": "2026-05-19",
-            "soil_moisture": 0.1866
+            "soil_moisture": 0.1989
         },
         {
             "date": "2026-05-20",
-            "soil_moisture": 0.1832
+            "soil_moisture": 0.1904
         }
     ],
     "Baku": [
         {
             "date": "2026-05-07",
-            "soil_moisture": 0.1845
+            "soil_moisture": 0.1857
         },
         {
             "date": "2026-05-08",
-            "soil_moisture": 0.1718
+            "soil_moisture": 0.1684
         },
         {
             "date": "2026-05-09",
-            "soil_moisture": 0.1494
+            "soil_moisture": 0.1441
         },
         {
             "date": "2026-05-10",
-            "soil_moisture": 0.1214
+            "soil_moisture": 0.1201
         },
         {
             "date": "2026-05-11",
-            "soil_moisture": 0.1055
+            "soil_moisture": 0.1011
         },
         {
             "date": "2026-05-12",
-            "soil_moisture": 0.0835
+            "soil_moisture": 0.0846
         },
         {
             "date": "2026-05-13",
-            "soil_moisture": 0.0814
+            "soil_moisture": 0.0773
         },
         {
             "date": "2026-05-14",
-            "soil_moisture": 0.0755
+            "soil_moisture": 0.0796
         },
         {
             "date": "2026-05-15",
-            "soil_moisture": 0.0732
+            "soil_moisture": 0.0751
         },
         {
             "date": "2026-05-16",
-            "soil_moisture": 0.0715
+            "soil_moisture": 0.073
         },
         {
             "date": "2026-05-17",
-            "soil_moisture": 0.0734
+            "soil_moisture": 0.0725
         },
         {
             "date": "2026-05-18",
-            "soil_moisture": 0.0685
+            "soil_moisture": 0.0704
         },
         {
             "date": "2026-05-19",
-            "soil_moisture": 0.0669
+            "soil_moisture": 0.0703
         },
         {
             "date": "2026-05-20",
-            "soil_moisture": 0.0818
+            "soil_moisture": 0.0697
         }
     ],
     "Saatli": [
         {
             "date": "2026-05-07",
-            "soil_moisture": 0.2084
+            "soil_moisture": 0.2082
         },
         {
             "date": "2026-05-08",
-            "soil_moisture": 0.2041
+            "soil_moisture": 0.203
         },
         {
             "date": "2026-05-09",
-            "soil_moisture": 0.1971
+            "soil_moisture": 0.1929
         },
         {
             "date": "2026-05-10",
-            "soil_moisture": 0.1893
+            "soil_moisture": 0.1831
         },
         {
             "date": "2026-05-11",
-            "soil_moisture": 0.1811
+            "soil_moisture": 0.1758
         },
         {
             "date": "2026-05-12",
-            "soil_moisture": 0.174
+            "soil_moisture": 0.1694
         },
         {
             "date": "2026-05-13",
-            "soil_moisture": 0.1669
+            "soil_moisture": 0.1632
         },
         {
             "date": "2026-05-14",
-            "soil_moisture": 0.163
+            "soil_moisture": 0.1783
         },
         {
             "date": "2026-05-15",
-            "soil_moisture": 0.1706
+            "soil_moisture": 0.1847
         },
         {
             "date": "2026-05-16",
-            "soil_moisture": 0.2646
+            "soil_moisture": 0.185
         },
         {
             "date": "2026-05-17",
-            "soil_moisture": 0.2474
+            "soil_moisture": 0.1929
         },
         {
             "date": "2026-05-18",
-            "soil_moisture": 0.2368
+            "soil_moisture": 0.1894
         },
         {
             "date": "2026-05-19",
-            "soil_moisture": 0.2148
+            "soil_moisture": 0.1883
         },
         {
             "date": "2026-05-20",
-            "soil_moisture": 0.203
+            "soil_moisture": 0.1785
         }
     ]
 }
